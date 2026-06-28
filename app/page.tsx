@@ -1,65 +1,43 @@
 import Image from "next/image";
+import Link from "next/link";
+import { FaCalendarCheck, FaHeart } from "react-icons/fa";
+import { IoSearchSharp } from "react-icons/io5";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="min-h-screen">
+      <section className="w-full bg-white h-screen relative overflow-hidden px-6 md:px-24 lg:px-47">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/main-bg1.png"
+            alt="Main Background"
+            fill
+            className="object-cover object-right"
+          />
+        </div>
+        <div className="pt-53 md:pt-56 lg:pt-70 z-10 relative">
+          <span className="text-[#F77332] font-medium text-base md:text-md">이색동물도 OK</span>
+          <h1 className="text-3xl md:text-4xl lg:text-6xl font-semibold break-keep leading-tight mt-2 tracking-tight">
+            가장 믿을 수 있는 <br />
+            <span className="text-[#F77332]">펫시터</span>를 찾아보세요
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-sm md:text-md lg:text-[18px] font-normal break-keep text-[#878787] mt-3 tracking-normal">
+            강아지 고양이 앵무새 햄스터 토끼 파충류까지,<br />
+            당신의 소중한 반려동물을 전문가에게 안심하고 맡기세요.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="flex flex-col lg:flex-row gap-3  mt-8 lg:mt-10 relative z-10 w-full lg:w-[32%]">
+          <Link href="/petsitter" className="flex flex-1 items-center justify-center gap-2 py-2 bg-[#F77332] hover:bg-[#200F07] text-white px-4 rounded-full text-base md:text-md lg:text-lg font-medium whitespace-nowrap md:gap-1 lg:gap-2">
+            <IoSearchSharp className="w-4 h-4 lg:w-5 lg:h-5" /> 펫시터 찾기
+          </Link>
+          <Link href="/mypage/favorites" className="flex flex-1 items-center justify-center gap-2 py-2 text-white px-4 rounded-full text-base md:text-md lg:text-lg font-medium bg-[#F77332] hover:bg-[#200F07] whitespace-nowrap md:gap-1 lg:gap-2">
+            <FaHeart className="w-4 h-4" /> 찜 목록
+          </Link>
+          <Link href="/mypage/reservations" className="flex flex-1 items-center justify-center gap-2 py-2 text-white px-4 rounded-full text-base md:text-md lg:text-lg font-medium bg-[#F77332] hover:bg-[#200F07] whitespace-nowrap md:gap-1 lg:gap-2">
+            <FaCalendarCheck className="w-4 h-4 " /> 예약내역
+          </Link>
         </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
