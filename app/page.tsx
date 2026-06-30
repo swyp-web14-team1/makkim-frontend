@@ -15,9 +15,9 @@ export default function Home() {
             className="object-cover object-right"
           />
         </div>
-        <div className="pt-53 md:pt-56 lg:pt-70 z-10 relative">
-          <span className="text-[#F77332] font-medium text-base md:text-md">이색동물도 OK</span>
-          <h1 className="text-3xl md:text-4xl lg:text-6xl font-semibold break-keep leading-tight mt-2 tracking-tight">
+        <div className="pt-53 md:pt-56 lg:pt-72 z-10 relative">
+          <span className="text-[#F77332] font-semibold text-base md:text-md">이색동물도 OK</span>
+          <h1 className="text-3xl md:text-4xl lg:text-6xl font-semibold break-keep leading-tight mt-0.5 tracking-tight">
             가장 믿을 수 있는 <br />
             <span className="text-[#F77332]">펫시터</span>를 찾아보세요
           </h1>
