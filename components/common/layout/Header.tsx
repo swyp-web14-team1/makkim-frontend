@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 // import Image from 'next/image'
 // import { useState } from 'react'
 // import { useAuthStore } from '@/store/authStore'
@@ -10,9 +11,11 @@ import Link from 'next/link'
 export default function Header() {
 //   const { isLoggedIn, user, logout } = useAuthStore()
 //   const [dropdownOpen, setDropdownOpen] = useState(false)
+  const pathname = usePathname()
+  const isHome = pathname === '/'
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-white/50 ">
+    <header className={`fixed top-0 left-0 w-full z-50 ${isHome ? 'bg-white/50' : 'bg-white border-b border-[#e5e5e5]'}`}>
         <div className="max-w-8xl mx-auto px-30 h-16 flex items-center justify-between">
             <div className='flex gap-30'>
                 <Link href="/" className="font-bold text-2xl tracking-tight text-[#F77332]">

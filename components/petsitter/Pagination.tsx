@@ -19,7 +19,7 @@ export default function Pagination({ currentPage, totalPages }: Props) {
   }
 
   return (
-    <div className="fixed bottom-8 left-0 right-0 bg-white  flex items-center justify-center gap-1 z-40">
+    <div className="bg-white flex items-center justify-center gap-1">
       {currentPage > 1 ? (
         <Link href={getPageUrl(currentPage - 1)} className="p-2 text-[#989898] hover:text-[#F77332] transition-colors">
           <FaChevronLeft size={14} />

@@ -25,7 +25,7 @@ export default function CategoryFilter({ selected }: Props) {
   }
 
   return (
-    <div className="flex items-center gap-5 overflow-x-auto ml-6 ">
+    <div className="flex items-center flex-wrap gap-3 md:gap-8 ml-6 ">
       {CATEGORIES.map(category => (
         <button
           key={category}
